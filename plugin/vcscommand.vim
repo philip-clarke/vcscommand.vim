@@ -510,7 +510,7 @@ function! s:GenerateResultBufferName(command, originalBuffer, vcsType, statusTex
 	if strlen(a:statusText) > 0
 		let bufferName .= ' ' . a:statusText
 	endif
-	let bufferName .= ' ' . fileName
+	let bufferName .= ' ' . fileName . '.vcs'
 	let counter = 0
 	let versionedBufferName = bufferName
 	while bufexists(versionedBufferName)
